@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+    font-size: 100%;
+}
+a{
+    font-size: 1%;
+    color: black;
+}
+
+
+header{
+    width: 100%;
+    height: 70px;
+    background: rgb(43, 97, 147);
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    letter-spacing: 2px;
+}
+.nav{
+    justify-content: right;
+}
+
+
+header > p,
+header  button{
+    color: #000000;
+    font-size: 32px;
+    margin: 0 15px;
+}
+
+
+header  button{
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+header .dropdown{
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+
+header .dropdown .dropdown-content{
+    display: none;
+}
+
+
+header .dropdown:hover .dropdown-content{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: rgb(237, 237, 237);
+    top: 70px;
+    border-radius: 0px 0px 5px 5px ;
+    width: 100%;
+    min-height: auto;
+    padding: 5px 10px 5px 10px;
+    font-size: 120rem;
+    align-items: center;
+}
+header .dropdown:hover .dropdown-content a{
+    color: #000000;
+    text-align: center;
+}
+header .icon{
+    display: none;
+}
+@media (max-width: 743.33px) {
+    header > p,
+    header  button{
+        display: none;
+    }
+    header .icon{
+        display: block;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 5% !important;
+
+
+        padding: 0 !important;
+    }
+    header.responsive p{
+     padding: 10px 0;
+    }
+    header.responsive > p,
+    header.responsive .dropdown{
+        display: block;
+        width: 100%;
+    }
+        header.responsive > p,
+    header.responsive button{
+        display: block;
+        padding: 10px 0;
+    }
+    header{
+        flex-direction: column;
+        min-height: 70px;
+        height: 100%;
+        align-items: flex-start;
+       
+    }
+    header .dropdown:hover .dropdown-content{
+        position: relative;
+        width: 100%;
+        top: 0  ;
+    }
+}
